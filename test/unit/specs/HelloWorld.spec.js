@@ -1,12 +1,10 @@
-import Vue from 'vue'
 import HelloWorld from '@/components/HelloWorld'
-import { shallow } from '@vue/test-utils'
-import bButton from 'bootstrap-vue/es/components/button/button'
+import { mount } from '@vue/test-utils'
 
 describe('HelloWorld.vue', () => {
   it('should render correct contents', () => {
 
-    const wrapper = shallow(HelloWorld, {stubs: [bButton]})
+    const wrapper = mount(HelloWorld)
     console.log(wrapper.html())
     const vm = wrapper.vm
     expect(vm.$el.querySelector('.hello button').textContent)
